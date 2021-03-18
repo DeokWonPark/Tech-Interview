@@ -6,9 +6,9 @@
 
 
 
+<center><img src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png" width="300px" /></center>
 
 
-<img src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png" width="300px" />
 
 
 
