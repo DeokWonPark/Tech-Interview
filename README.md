@@ -47,7 +47,7 @@
 
 ----
 
-</br></br></br>
+</br></br>
 
 #### HTTP
 
@@ -124,7 +124,7 @@ HTTP란 `Hyper Text Transfer Protocol` 의 약자로 웹 상에서 웹 브라우
 
 ----
 
-</br></br></br>
+</br></br>
 
 #### 동기/비동기
 
@@ -145,7 +145,7 @@ HTTP란 `Hyper Text Transfer Protocol` 의 약자로 웹 상에서 웹 브라우
 
 ----
 
-</br></br></br>
+</br></br>
 
 #### 쓰레드/프로세스
 
@@ -199,7 +199,7 @@ HTTP란 `Hyper Text Transfer Protocol` 의 약자로 웹 상에서 웹 브라우
 
 ----
 
-</br></br></br>
+</br></br>
 
 #### Restful API
 
@@ -221,5 +221,20 @@ REST의 기본 원칙을 성실히 지켜 디자인 한 API
 
 ----
 
-</br></br></br>
+</br></br>
 
+#### 메시지 큐
+
+비동기 메시지 처리방식이다.
+
+메시지 기반 미들웨어로 메시지를 이용하여 여러 어플리케이션, 시스템, 서비스들을 연결해주는 솔루션이다.
+
+**기본원리**
+
+- Producer가 메시지를 Queue에 넣어두면 Consumer가 비동기적으로 메시지를 가져가 처리하는 방식이다.
+
+<p align="center"> <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile25.uf.tistory.com%2Fimage%2F226FFA4E587107DE285DF4" width="500px" /></p>
+
+
+
+Client와 동기적으로 많은 데이터를 통신하게되면 병목현상으로 서비스의 성능이 저하 될 수 있다.
