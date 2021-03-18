@@ -6,10 +6,6 @@
 
 
 
-<center><img src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png" width="300px" /></center>
-
-
-
 <p align="center"> <img src="https://uxwing.com/wp-content/themes/uxwing/download/07-design-and-development/administrator-developer.png" width="300px" /></p>
 
 </br>
@@ -198,4 +194,32 @@ HTTP란 `Hyper Text Transfer Protocol` 의 약자로 웹 상에서 웹 브라우
   - 단점 
     - 여러 쓰레드가 자원을 공유하므로 동기화 문제가 발생한다.
     - 한 쓰레드의 문제가 생기면 전체에 문제가 발생하게 된다.
+
+</br>
+
+----
+
+</br></br></br>
+
+#### Restful API
+
+REST의 기본 원칙을 성실히 지켜 디자인 한 API
+
+**REST란 ?**
+
+- URI를 통해서 웹 상의 자원을 명시하고, HTTP Method(GET, POST, PUT, PATCH, DELETE)를 통해 자원에 CRUD연산을 적용하는 것을 의미한다.
+
+
+
+**[ REST 구성요소 ]**
+
+- **Resource (자원)** : 서버는 고유한 URI를 가진다.
+- **Method (행위)** : 서버에게 요청을 보내기 위한 방식 (GET, POST, PUT, PATCH, DELETE)
+- **Representation (표현)** : 클라이언트가 서버와 주고받는 데이터 형태 (json,xml 등)
+
+</br>
+
+----
+
+</br></br></br>
 
