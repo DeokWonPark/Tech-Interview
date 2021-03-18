@@ -29,7 +29,7 @@
 - [Restful API](#Restful-API)
 - [메시지 큐](#메시지-큐)
 - [동시성 이슈](#동시성-이슈)
-- [Garbage Collection](#Garbage-Collection)
+- [GarbageCollection](#Garbage-Collection)
 - [테스트 코드](#테스트-코드)
 - [리팩토링](#리팩토링)
 
@@ -269,3 +269,37 @@ Client와 동기적으로 많은 데이터를 통신하게되면 병목현상으
 ----
 
 </br></br>
+
+### GarbageCollection
+
+**가비지란 ?**
+
+시스템이 더 이상 사용하지 않는 유효하지 않은 할당된 메모리다.
+
+
+
+**Garbage Collection** 
+
+이러한 유효하지 않은 할당된 메모리를 찾아 자동으로 회수하여 반환시키는 것
+
+
+
+**Garbage Collector 원리**
+
+1. Mark - 스택의 모든 변수, 객체를 확인하여 사용중인 메모리인지 확인한다.
+2. Stop the World -  Garbage Collection실행을 위해 모든 어플리케이션의 실행을 중단시키고 Garbage Collector만 실행시킨다.
+3. Sweep - 1번에서 Mark되지 않은 메모리를 반환한다.
+
+
+
+**Garbage Collection의 한계** 
+
+- 실행시간에 동작하여 성능이 하락될 수 있다.
+- 더이상 접근 불가능한 객체만 회수하기 때문에 다른 문제로 메모리 누수가 발생 할 수 있다.
+
+</br>
+
+----
+
+</br></br>
+
