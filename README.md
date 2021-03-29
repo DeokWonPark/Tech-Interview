@@ -562,6 +562,43 @@ Client와 동기적으로 많은 데이터를 통신하게되면 병목현상으
 
 </br></br>
 
+### Event Loop
+
+자바스크립트는 자체적으로 싱글쓰레드 기반의 언어이다.  웹에서 동시에 병렬적인 작업이 이루어질 수 있는 이유는 브라우저에서 제공되는 Web APIs 덕분이다.
+
+
+
+<p align="center"> <img src="http://sculove.github.io/blog/2018/01/18/javascriptflow/browser-structure.png" width="500px" /></p>
+
+출처: [자바스크립트 비동기 처리 과정과 RxJS Scheduler](http://sculove.github.io/blog/2018/01/18/javascriptflow/)
+
+
+
+자바스크립트의 Call Stack에는 호출되는 함수들이 쌓이게 된다. 
+
+**Task Queue** : SetTimeOut이나 브라우저에서 발생하는 이벤트에 등록된 콜백함수가 테스크큐에 저장되게 된다.
+
+**Microtask Queue** : Promise에 등록된 비동기 콜백함수 또는 mutation Observer라는 Web API에 등록된 콜백함수가 마이크로테스크큐에 저장된다.
+
+**Animation Frames** : Rendering 직전에 수행되어야할 콜백함수들이 저장된다.
+
+
+
+Event Loop는 CallStack과 위에 정의된 3개의 큐들을 무한히 순회하면서 다음과 같은 규칙으로 실행된다.
+
+1. CallStack의 작업들이 모두 수행되어 비어질 때까지 Event Loop는 CallStack에 머물게 된다.
+2. Event Loop는 무한히 돌면서 1초에 60Frames에 맞춰 rendering를 수행하게 된다.
+3. MicrotaskQueue에 loop가 도달했을 경우 큐에 모든 작업을 하나씩 CallStack에 넣어 수행하며MicrotaskQueue가 모두 비어질때까지 수행하게 된다.
+4. Task Queue에 loop가 도달했을 경우 큐에서 하나의 작업만 CallStack로 가져가 수행하게 된다.
+
+
+
+</br>
+
+---
+
+</br></br>
+
 ### Reference
 
 - [Technical Interview Guidelines for Beginners](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
