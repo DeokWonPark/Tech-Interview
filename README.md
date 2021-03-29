@@ -599,6 +599,22 @@ Event Loop는 CallStack과 위에 정의된 3개의 큐들을 무한히 순회�
 
 </br></br>
 
+
+
+### 클로저
+
+내부함수가 생성될 당시의 주변의 스코프 체인을 가지고 있기 때문에 외부함수가 소멸되어도 내부함수에서 외부함수의 스코프에 접근이 가능한것을 의미한다.
+
+</br>
+
+---
+
+</br></br>
+
+
+
+
+
 ### Reference
 
 - [Technical Interview Guidelines for Beginners](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
