@@ -613,6 +613,43 @@ Event Loop는 CallStack과 위에 정의된 3개의 큐들을 무한히 순회�
 
 
 
+### JavaScript의 this
+
+Javascript의 this는 다른 언어들과 비교하여 조금 다르게 동작한다.
+
+this의 값은 함수를 호출하는 방법에 의해 결정된다.
+
+**누가 호출했는가?  즉 호출한 객체가 된다**
+
+```javascript
+const someone={
+	name:'Deokwon',
+	WhoAmI:function(){
+		console.log(this);
+	}
+}
+
+const my = someone.WhoAmI;
+
+someone.WhoAmI();	// someone 객체
+my();				// Window 객체
+
+```
+
+출처: [코드종](https://www.youtube.com/watch?v=PAr92molMHU&t=531s)
+
+</br>
+
+---
+
+</br></br>
+
+
+
+
+
+
+
 
 
 ### Reference
